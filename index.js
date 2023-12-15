@@ -17,6 +17,10 @@ app.use(express.urlencoded({limit : '20mb', extended : true}));
 
 app.use('/api/products', require('./routes/Product'));
 
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
